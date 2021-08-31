@@ -1,13 +1,17 @@
-** Overview **
+**Overview**
+
 This zip file contains MATLAB and R scripts that reproduce the main results of the paper. 
 
-** System requirements **
+**System requirements**
+
 The codes require only a standard computer with enough RAM to support the in-memory operations.
 
-** OS requirements **
+**OS requirements**
+
 The codes are tested on Windows 10 and Linux (Ubuntu 20.04)
 
-**  Installation guide ** 
+**Installation guide** 
+
 All the scripts are tested on MATLAB (R2018-b, R2021a) and R (4.0.4). It might take few minutes to complete to install all the required packages.  
 
 The MATLAB scripts require few functions, nmf and LIBSVM packages. The additional functions and the nmf package which can be used without compilation have been included in “utils” directory and included in the scripts. You need to install LIBSVM package in MATLAB. Please follow the instructions below. 
@@ -20,7 +24,8 @@ Installation of LIBSVM
 
 The R script requires survminer, survival, ggplot2 and gdata packages. You can use install.packages("package name") to install the packages. 
 
-** Demo **
+**Demo**
+
 Please find each script file in "codes" directory and run it in MATLAB or R. The datasets which are required to run each script have been included in "data" directory. 
 
 For each script, the expected output and run time are as follows
