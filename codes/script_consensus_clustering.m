@@ -3,21 +3,20 @@ clc; clear; close all;
 % "Development and Validation of a Prognostic and Predictive 
 %       32-Gene Signature for Gastric Cancer"
 %
-% Submitted to Nature Communications
 % 
 %
-% This script is written to reproduce the consensus clustering resutls shown 
-% figure 2 B-C-D. 
+% This script is written to reproduce the consensus clustering resutls shown in
+% Figure 2 B-C-D. 
 %
 % Input data (X): samples X features (=32 genes)
 % Output variable (Y): samples X 1
 %
 % We run a consensus clustering method [Stefano Monti et. al, Machine Learning 
-% (2003)] with the fixed number of clusters K=4. We use a version of NMF [Jingu Kim   
+% (2003)] with the fixed number of clusters K=4. We have used a version of NMF [Jingu Kim   
 % and Haesun Park, ICDM (2008)] as a base clustering method. 
-% To produce the exact clustering results in the main paper, we provide 
-% the ramdom indices of the samples for bootstrapping and all the inital matrices 
-% of the NMF. User can use the consensus clustering method with random
+% To produce the exact clustering results in the main paper, we have provided 
+% the ramdom indices of the samples for the bootstrapping and all the inital matrices 
+% of the NMF. User also can run the consensus clustering method with random
 % initialization by setting mflag_random to True;
 
 % Please contanct dubuck@gmail.com if you have any concerns or comments about the implementation. 
@@ -55,8 +54,8 @@ mr_ResRate = 0.8; % the resampling rate
 mn_Patients = length(mc_sampleids);
 mn_SubSamples = round(mn_Patients*mr_ResRate);
 
-%- Add the path of the NMF [Jingu Kim and Haesun Park, ICDM (2008)] to the system
-% We use a nmf package available at https://www.cc.gatech.edu/~hpark/nmfbpas.html
+%- Add the path of the NMF [Jingu Kim and Haesun Park, ICDM (2008)] to MATLAB
+% We have used the nmf package available at https://www.cc.gatech.edu/~hpark/nmfbpas.html
 addpath('../utils/nmf_bpas/')
 
 mstr_savePath = '../figures/';
@@ -155,6 +154,7 @@ for mn_i = 1:length(mc_groups)
     YrefNum(strcmpi(Yref, mc_groups{mn_i})) = mn_i;
 end
 
+% The following code (bestMap) matches the cluster labels obtained by the above method with the ones we already reported in the paper.  
 addpath('../utils/')
 Yest_adj = bestMap(YrefNum, Yest);
 

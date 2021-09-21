@@ -3,14 +3,12 @@ clc; clear; close all
 % "Development and Validation of a Prognostic and Predictive 
 %       32-Gene Signature for Gastric Cancer"
 %
-% Submitted to Nature Communications
-% 
 %
-% This script is written to reproduce the result shown figure 5-A.
+% This script is written to reproduce the result shown in Supplementary Figure 7.
 %
-% A multiclass classifier (implemented based on multiple SVMs with all pairwise
-% comparison) is trained using the Yonsei cohort (the cluster labels, from 1
-% to 4, are used as multi-class label). 
+% A multiclass classifier (implemented based on multiple SVMs in all pairwise
+% comparisons) is trained using the Yonsei cohort (the cluster labels, from 1
+% to 4, are used as multi-class labels). 
 
 % Please contanct dubuck@gmail.com if you have any concerns or comments about the implementation. 
 %--------------------------------------------------------------------------
@@ -37,8 +35,9 @@ mm_Surv = mc_data.Surv;
 %- Multiclass SVM
 K = 4;
 
-%- please add the path where LIBSVM is located
-addpath('../utils')
+%- please add the path where your LIBSVM files are located in
+% addpath('../utils') % for Windows
+addpath('/home/cs-com/Downloads/libsvm-3.25/matlab');
 
 mstr_code = 'APs';
 mm_Codemat = myfunc_ConstCode((1:K)', mstr_code);
@@ -78,7 +77,7 @@ m_vWeights = ones(mn_M, 1)/mn_M;
 % test
 [mv_Pred_tst, m_mOuts_tst] = myfunc_Prediction_W(mm_ProbMat_tst, m_vWeights, mm_Codemat);
 
-%- Response 
+% draw a KM plot 
 addpath('../utils')
 
 mm_line_colors = [0 0 0;  % black

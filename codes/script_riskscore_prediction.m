@@ -4,16 +4,15 @@ clc; clear; close all;
 % "Development and Validation of a Prognostic and Predictive 
 %       32-Gene Signature for Gastric Cancer"
 %
-% Submitted to Nature Communications
 % 
 %
-% This script is written to reproduce the risk prediction shown in figure 3-B 
+% This script is written to reproduce the risk prediction shown in Figure 3-B 
 
 % The risk score predictor (an SVM with a linear kernel, implemented by libSVM) 
-% is trained using the best outcome group (black, set to negative class) and 
-% the worst outcome group (red, set to positive class). 
+% is trained using the best outcome group (black, set to the negative class) and 
+% the worst outcome group (red, set to the positive class). 
 % To reproduce the exact same result in the manucript, we provide the
-% trained SVM (User can train own SVM model by setting mflag_model_reuse to false.
+% trained SVM model (User also can train his/her own SVM model by setting mflag_model_reuse to false.
 
 % Please contanct dubuck@gmail.com if you have any concerns or comments about the implementation. 
 %--------------------------------------------------------------------------
@@ -21,8 +20,9 @@ clc; clear; close all;
 %- loading the data
 load('../data/Combat_data_All.mat');   
 
-%- please add the path where LIBSVM is located
-addpath('../utils')
+%- please add the path where your LIBSVM files are located in
+% addpath('../utils') % for Windows
+addpath('/home/cs-com/Downloads/libsvm-3.25/matlab');
 
 % model reuse
 mflag_model_reuse = true;
@@ -60,7 +60,9 @@ m_vgroupIDX(m_vXvals > y_max) = 3;
 mm_line_colors = [0 0 0;  % black
                   0 1 0;  % green
                   1 0 0]; % red
-              
+
+% draw a KM plot              
+addpath('../utils')
 [p, fh] = MatSurv(mc_data.Surv_month, mc_data.Surv_status, ...
                   cellstr(string(m_vgroupIDX)),...
                   'LineColor',mm_line_colors,'Print',false);

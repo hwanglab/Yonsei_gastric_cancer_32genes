@@ -9,10 +9,9 @@ require(gdata)
 #   "Development and Validation of a Prognostic and Predictive 
 # 32-Gene Signature for Gastric Cancer"
 # 
-# Submitted to Nature Communications
 # 
 # 
-# This script is written to reproduce the result shown figure 4.
+# This script is written to reproduce the result shown in Figure 4.
 # 
 # Please contanct dubuck@gmail.com if you have any concerns or comments about the implementation. 
 # --------------------------------------------------------------------------
@@ -20,7 +19,7 @@ require(gdata)
   
 #--- data preprocessing 
 # Please set the root directory of the scripts to the working directory
-setwd('C:\\Users\\parks\\Downloads\\Yonsei_gastric_cancer_32genes-main\\')
+setwd('/home/cs-com/Downloads/Yonsei_gastric_cancer_32genes-main')
 
 load(file.path(getwd(), "data/data_Yonsei_5Fu_comparison.R"))
 
