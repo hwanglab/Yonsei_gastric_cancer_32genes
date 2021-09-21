@@ -10,7 +10,7 @@ The codes are tested on Windows 10 and Linux (Ubuntu 20.04)
 **Installation guide**<br/>
 All the scripts are tested on MATLAB (R2018-b, R2021a) and R (4.0.4). It might take few minutes to complete to install all the required packages.  
 
-The MATLAB scripts require few additional functions, nmf and LIBSVM packages. The additional functions and the nmf package which can be used without compilation have been included in “utils” directory. You need to install LIBSVM package in MATLAB. Please follow the instructions below. 
+The MATLAB scripts require few additional functions, nmf and LIBSVM packages. The additional function scripts (bestMap, hungarian and MatSurv: the author's information is included in each scirpt) and the nmf package which can be used without compilation have been included in “utils” directory. You need to install LIBSVM package in MATLAB. Please follow the instructions below. 
 Installation of LIBSVM
 -	Windows: pre-compiled mex files are included in "util" directory. 
 -	Linux: The scripts interact with LIBSVM in MATLAB interface. Please visit the Github page for LIBSVM (https://github.com/cjlin1/libsvm) and 
