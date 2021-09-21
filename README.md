@@ -10,9 +10,9 @@ The codes are tested on Windows 10 and Linux (Ubuntu 20.04)
 **Installation guide**<br/>
 All the scripts are tested on MATLAB (R2018-b, R2021a) and R (4.0.4). It might take few minutes to complete to install all the required packages.  
 
-The MATLAB scripts require few functions, nmf and LIBSVM packages. The additional functions and the nmf package which can be used without compilation have been included in “utils” directory and included in the scripts. You need to install LIBSVM package in MATLAB. Please follow the instructions below. 
+The MATLAB scripts require few additional functions, nmf and LIBSVM packages. The additional functions and the nmf package which can be used without compilation have been included in “utils” directory. You need to install LIBSVM package in MATLAB. Please follow the instructions below. 
 Installation of LIBSVM
--	Windows: pre-compiled mex files are included in "util" directory. The path where the package is located has been include in the scripts  
+-	Windows: pre-compiled mex files are included in "util" directory. 
 -	Linux: The scripts interact with LIBSVM in MATLAB interface. Please visit the Github page for LIBSVM (https://github.com/cjlin1/libsvm) and 
 		   check out the installation instructions under “MATLAB/OCTAVE Interface” (After downloading the package, please go to "matlab" directory and 
 		   run "make.m" in MATLAB. Please make sure that C/C++ compilers are properly installed in your MATLAB. 
@@ -33,8 +33,8 @@ script_riskscore_prediction.m
 - KM curves for overall survival stratified by risk group in ACRG + MD Anderson + TCGA combined dataset (please see Figure 3-B)
 - It might take less than a minutes 
 
-script_consensus_clustering.m 
-- KM curves for overall survival stratified by the multiclass classifier trained using the Yonsei cohort 
+script_multiclasspred_trnYonsei_tst_ACRG_Shon.m
+- KM curves for overall survival stratified by the multiclass classifier trained using the Yonsei cohort (please see Supplementary Figure 7-AB)
 - It might take less than a minutes 
 
 script_5Fu_comparison.R
