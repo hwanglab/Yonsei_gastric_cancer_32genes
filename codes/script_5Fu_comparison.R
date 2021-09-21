@@ -9,8 +9,7 @@ require(gdata)
 #   "Development and Validation of a Prognostic and Predictive 
 # 32-Gene Signature for Gastric Cancer"
 # 
-# 
-# 
+#  
 # This script is written to reproduce the result shown in Figure 4.
 # 
 # Please contanct dubuck@gmail.com if you have any concerns or comments about the implementation. 
@@ -24,7 +23,7 @@ setwd('/home/cs-com/Downloads/Yonsei_gastric_cancer_32genes-main')
 load(file.path(getwd(), "data/data_Yonsei_5Fu_comparison.R"))
 
 #--------------------------------------------------------------
-mstr_save_path = file.path(getwd(), "figures", "Yonsei_5_Fu_comparison_");
+mstr_save_path = file.path(getwd(), "Yonsei_5_Fu_comparison_");
 
 mc_colors = c('black', 'green', 'blue', 'red');
 mstr_Chemo = c('None', '5-FU alone', '5-FU + platinum', '5-FU + others');
