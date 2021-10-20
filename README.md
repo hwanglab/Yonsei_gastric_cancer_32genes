@@ -23,22 +23,18 @@ The R script requires survminer, survival, ggplot2 and gdata packages. You can u
 **Demo**<br/>
 Please find each script file in "codes" directory and run it in MATLAB or R. The datasets which are required to run each script have been included in "data" directory. 
 
-For each script, the expected output and run time are as follows
+We have included the codes which can reprode the main results of the paper. For each script, the expected output and run time are as follows
 
 script_consensus_clustering.m 
-- Kaplan-meier (KM) curves for overall survival stratified by the consensus clustering described in the main text (please see Figure 2-BCD)
+- Kaplan-meier (KM) curves for overall survival stratified by the consensus clustering described in the main text (please see Figure 2-B)
 - It might take few minutes due to the bootstrapping steps (where NMF runs 1000 times)
 
 script_riskscore_prediction.m
-- KM curves for overall survival stratified by risk group in ACRG + MD Anderson + TCGA combined dataset (please see Figure 3-B)
-- It might take less than a minutes 
-
-script_multiclasspred_trnYonsei_tst_ACRG_Shon.m
-- KM curves for overall survival stratified by the multiclass classifier trained using the Yonsei cohort (please see Supplementary Figure 7-AB)
+- KM curves for overall survival stratified by risk group in ACRG + MD Anderson + TCGA combined dataset (please see Figure 2-C)
 - It might take less than a minutes 
 
 script_5Fu_comparison.R
-- Adjust KM curves for overall survival in the Yonsei cohort with the adjuvant chemotherapy information (please see Figure 4)
+- Adjust KM curves for overall survival in the Yonsei cohort with the adjuvant chemotherapy information (please see Figure 3)
 
 
  
