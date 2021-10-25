@@ -30,7 +30,7 @@ script_consensus_clustering.m
 - It might take few minutes due to the bootstrapping steps (where NMF runs 1000 times)
 
 script_riskscore_prediction.m
-- KM curves for overall survival stratified by risk group in ACRG + MD Anderson + TCGA combined dataset (please see Figure 2-C)
+- Risk score prediction results for the ACRG + MD Anderson + TCGA combined dataset (the prediction results are used to generate Figure 2-C)
 - It might take less than a minutes 
 
 script_5Fu_comparison.R
