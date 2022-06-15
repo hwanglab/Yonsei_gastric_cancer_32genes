@@ -1,5 +1,5 @@
 **Overview**<br/>
-This zip file contains MATLAB and R scripts that reproduce the main results of the paper. 
+This repository contains the scripts which can reproduce the main analysis results in our paper “Development and validation of a prognostic and predictive 32-gene signature for gastric cancer“, Nature Communications (2022) (https://doi.org/10.1038/s41467-022-28437-y).
 
 **System requirements**<br/>
 The codes require only a standard computer with enough RAM to support the in-memory operations.
@@ -23,7 +23,7 @@ The R script requires survminer, survival, ggplot2 and gdata packages. You can u
 **Demo**<br/>
 Please find each script file in "codes" directory and run it in MATLAB or R. The datasets which are required to run each script have been included in "data" directory. 
 
-We have included the codes which can reprode the main results of the paper. For each script, the expected output and run time are as follows
+For each script, the expected output and run time are as follows
 
 script_consensus_clustering.m 
 - Kaplan-meier (KM) curves for overall survival stratified by the consensus clustering described in the main text (please see Figure 2-B)
@@ -36,5 +36,5 @@ script_riskscore_prediction.m
 script_5Fu_comparison.R
 - Adjust KM curves for overall survival in the Yonsei cohort with the adjuvant chemotherapy information (please see Figure 3)
 
-
+Please contact the authors (park.sunho@mayo.edu) for questions and comments about the scripts. 
  
